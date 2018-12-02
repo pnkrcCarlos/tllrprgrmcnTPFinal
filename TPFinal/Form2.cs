@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,67 +8,60 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-// This is the code for your desktop app.
-// Press Ctrl+F5 (or go to Debug > Start Without Debugging) to run your app.
-
 namespace TPFinal
 {
-    public partial class Form1 : Form
+    public partial class Form2 : Form
     {
-        public Form1()
+        public Form2()
         {
             InitializeComponent();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
+            CajaPIN.UseSystemPasswordChar = true;
         }
 
         private void number_Click(object sender, EventArgs e)
         {
-            ArgumentOutOfRangeException iExcepcion=new ArgumentOutOfRangeException();
-            Button iButton=sender as Button;
+            ArgumentOutOfRangeException iExcepcion = new ArgumentOutOfRangeException();
+            Button iButton = sender as Button;
             try
             {
-                if (CajaTexto.Text.Length < 8)
+                if (CajaPIN.Text.Length < 6)
                 {
-                    CajaTexto.Text += iButton.Text;
+                    CajaPIN.Text += iButton.Text;
                 }
                 else throw iExcepcion;
-                
+
             }
-            catch(ArgumentOutOfRangeException)
+            catch (ArgumentOutOfRangeException)
             {
-                MessageBox.Show("Excedi� el numero maximo de numeros de un DNI");
+                MessageBox.Show("Excedió el numero maximo de numeros de un PIN");
             }
         }
 
         private void buttonClear_Click(object sender, EventArgs e)
         {
-            CajaTexto.Clear();
+            CajaPIN.Clear();
         }
 
         private void buttonBack_Click(object sender, EventArgs e)
         {
-            string s = CajaTexto.Text;
+            string s = CajaPIN.Text;
 
             if (s.Length > 1)
             {
                 s = s.Substring(0, s.Length - 1);
-                CajaTexto.Text = s;
+                CajaPIN.Text = s;
             }
             else
             {
-                CajaTexto.Text = "";
+                CajaPIN.Text = "";
             }
         }
 
         private void BotonAceptar_Click(object sender, EventArgs e)
         {
-            Form2 f2 = new Form2(); 
-            f2.Show(); 
-            Hide(); 
+            Form3 f3 = new Form3();
+            f3.Show();
+            Hide();
         }
     }
 }
