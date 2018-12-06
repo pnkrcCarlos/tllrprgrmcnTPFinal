@@ -24,12 +24,14 @@ namespace TPFinal
             Button iButton = sender as Button;
             try
             {
-                if (CajaPIN.Text.Length < 6)
+                if (CajaPIN.Text.Length < 4)
                 {
                     CajaPIN.Text += iButton.Text;
                 }
-                else throw iExcepcion;
-
+                else
+                {
+                    throw iExcepcion;
+                }
             }
             catch (ArgumentOutOfRangeException)
             {
