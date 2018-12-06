@@ -1,6 +1,6 @@
 ﻿namespace TPFinal
 {
-    partial class Form1
+    partial class Form2
     {
         /// <summary>
         /// Required designer variable.
@@ -28,8 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Titulo = new System.Windows.Forms.Label();
-            this.CajaTexto = new System.Windows.Forms.TextBox();
+            this.BotonAceptar = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -43,28 +42,24 @@
             this.buttonBack = new System.Windows.Forms.Button();
             this.button0 = new System.Windows.Forms.Button();
             this.buttonClear = new System.Windows.Forms.Button();
-            this.BotonAceptar = new System.Windows.Forms.Button();
+            this.CajaPIN = new System.Windows.Forms.TextBox();
+            this.Titulo = new System.Windows.Forms.Label();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // Titulo
+            // BotonAceptar
             // 
-            this.Titulo.AutoSize = true;
-            this.Titulo.Font = new System.Drawing.Font("Consolas", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Titulo.Location = new System.Drawing.Point(12, 128);
-            this.Titulo.Name = "Titulo";
-            this.Titulo.Size = new System.Drawing.Size(388, 56);
-            this.Titulo.TabIndex = 0;
-            this.Titulo.Text = "Ingrese su DNI";
-            // 
-            // CajaTexto
-            // 
-            this.CajaTexto.Font = new System.Drawing.Font("Consolas", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CajaTexto.Location = new System.Drawing.Point(96, 211);
-            this.CajaTexto.Name = "CajaTexto";
-            this.CajaTexto.Size = new System.Drawing.Size(218, 64);
-            this.CajaTexto.TabIndex = 1;
-            this.CajaTexto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.BotonAceptar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.BotonAceptar.Font = new System.Drawing.Font("Consolas", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BotonAceptar.Location = new System.Drawing.Point(117, 324);
+            this.BotonAceptar.Name = "BotonAceptar";
+            this.BotonAceptar.Size = new System.Drawing.Size(218, 68);
+            this.BotonAceptar.TabIndex = 7;
+            this.BotonAceptar.Text = "Aceptar";
+            this.BotonAceptar.UseVisualStyleBackColor = true;
+            this.BotonAceptar.Click += new System.EventHandler(this.BotonAceptar_Click);
             // 
             // flowLayoutPanel1
             // 
@@ -80,10 +75,10 @@
             this.flowLayoutPanel1.Controls.Add(this.buttonBack);
             this.flowLayoutPanel1.Controls.Add(this.button0);
             this.flowLayoutPanel1.Controls.Add(this.buttonClear);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(442, 77);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(463, 87);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(289, 386);
-            this.flowLayoutPanel1.TabIndex = 2;
+            this.flowLayoutPanel1.TabIndex = 6;
             // 
             // button1
             // 
@@ -217,33 +212,36 @@
             this.buttonClear.UseVisualStyleBackColor = true;
             this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
             // 
-            // BotonAceptar
+            // CajaPIN
             // 
-            this.BotonAceptar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.BotonAceptar.Font = new System.Drawing.Font("Consolas", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BotonAceptar.Location = new System.Drawing.Point(96, 314);
-            this.BotonAceptar.Name = "BotonAceptar";
-            this.BotonAceptar.Size = new System.Drawing.Size(218, 68);
-            this.BotonAceptar.TabIndex = 3;
-            this.BotonAceptar.Text = "Aceptar";
-            this.BotonAceptar.UseVisualStyleBackColor = true;
-            this.BotonAceptar.Click += new System.EventHandler(this.BotonAceptar_Click);
+            this.CajaPIN.Font = new System.Drawing.Font("Consolas", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CajaPIN.Location = new System.Drawing.Point(117, 221);
+            this.CajaPIN.Name = "CajaPIN";
+            this.CajaPIN.Size = new System.Drawing.Size(218, 64);
+            this.CajaPIN.TabIndex = 5;
+            this.CajaPIN.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // Form1
+            // Titulo
+            // 
+            this.Titulo.AutoSize = true;
+            this.Titulo.Font = new System.Drawing.Font("Consolas", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Titulo.Location = new System.Drawing.Point(33, 138);
+            this.Titulo.Name = "Titulo";
+            this.Titulo.Size = new System.Drawing.Size(388, 56);
+            this.Titulo.TabIndex = 4;
+            this.Titulo.Text = "Ingrese su PIN";
+            // 
+            // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.BotonAceptar);
             this.Controls.Add(this.flowLayoutPanel1);
-            this.Controls.Add(this.CajaTexto);
+            this.Controls.Add(this.CajaPIN);
             this.Controls.Add(this.Titulo);
-            this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Name = "Form2";
+            this.Text = "Form2";
             this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -252,8 +250,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label Titulo;
-        private System.Windows.Forms.TextBox CajaTexto;
+        private System.Windows.Forms.Button BotonAceptar;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
@@ -267,7 +264,7 @@
         private System.Windows.Forms.Button buttonBack;
         private System.Windows.Forms.Button button0;
         private System.Windows.Forms.Button buttonClear;
-        private System.Windows.Forms.Button BotonAceptar;
+        private System.Windows.Forms.TextBox CajaPIN;
+        private System.Windows.Forms.Label Titulo;
     }
 }
-

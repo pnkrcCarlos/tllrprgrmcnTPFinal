@@ -20,16 +20,55 @@ namespace TPFinal
             InitializeComponent();
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
-            // Click on the link below to continue learning how to build a desktop app using WinForms!
-            System.Diagnostics.Process.Start("http://aka.ms/dotnet-get-started-desktop");
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void number_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Thanks!");
+            ArgumentOutOfRangeException iExcepcion=new ArgumentOutOfRangeException();
+            Button iButton=sender as Button;
+            try
+            {
+                if (CajaTexto.Text.Length < 8)
+                {
+                    CajaTexto.Text += iButton.Text;
+                }
+                else throw iExcepcion;
+                
+            }
+            catch(ArgumentOutOfRangeException)
+            {
+                MessageBox.Show("Excedió el numero maximo de numeros de un DNI");
+            }
+        }
+
+        private void buttonClear_Click(object sender, EventArgs e)
+        {
+            CajaTexto.Clear();
+        }
+
+        private void buttonBack_Click(object sender, EventArgs e)
+        {
+            string s = CajaTexto.Text;
+
+            if (s.Length > 1)
+            {
+                s = s.Substring(0, s.Length - 1);
+                CajaTexto.Text = s;
+            }
+            else
+            {
+                CajaTexto.Text = "";
+            }
+        }
+
+        private void BotonAceptar_Click(object sender, EventArgs e)
+        {
+            Form2 f2 = new Form2(); 
+            f2.Show(); 
+            Hide(); 
         }
     }
 }
