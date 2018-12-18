@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.buttonConsultarSaldo = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonBlanquearPin = new System.Windows.Forms.Button();
-            this.buttonConsultarSaldo = new System.Windows.Forms.Button();
-            this.buttonUltimosMovimientos = new System.Windows.Forms.Button();
             this.buttonSalir = new System.Windows.Forms.Button();
+            this.buttonUltimosMovimientos = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,6 +57,25 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(513, 402);
             this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // buttonConsultarSaldo
+            // 
+            this.buttonConsultarSaldo.AutoSize = true;
+            this.buttonConsultarSaldo.BackColor = System.Drawing.Color.SlateBlue;
+            this.buttonConsultarSaldo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonConsultarSaldo.FlatAppearance.BorderSize = 0;
+            this.buttonConsultarSaldo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonConsultarSaldo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Indigo;
+            this.buttonConsultarSaldo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonConsultarSaldo.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonConsultarSaldo.ForeColor = System.Drawing.Color.White;
+            this.buttonConsultarSaldo.Location = new System.Drawing.Point(3, 124);
+            this.buttonConsultarSaldo.Name = "buttonConsultarSaldo";
+            this.buttonConsultarSaldo.Size = new System.Drawing.Size(507, 47);
+            this.buttonConsultarSaldo.TabIndex = 7;
+            this.buttonConsultarSaldo.Text = "Consultar saldo";
+            this.buttonConsultarSaldo.UseVisualStyleBackColor = false;
+            this.buttonConsultarSaldo.Click += new System.EventHandler(this.buttonConsultarSaldo_Click);
             // 
             // label1
             // 
@@ -91,24 +110,24 @@
             this.buttonBlanquearPin.UseVisualStyleBackColor = false;
             this.buttonBlanquearPin.Click += new System.EventHandler(this.buttonBlanquearPin_Click);
             // 
-            // buttonConsultarSaldo
+            // buttonSalir
             // 
-            this.buttonConsultarSaldo.AutoSize = true;
-            this.buttonConsultarSaldo.BackColor = System.Drawing.Color.SlateBlue;
-            this.buttonConsultarSaldo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonConsultarSaldo.FlatAppearance.BorderSize = 0;
-            this.buttonConsultarSaldo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.buttonConsultarSaldo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Indigo;
-            this.buttonConsultarSaldo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonConsultarSaldo.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonConsultarSaldo.ForeColor = System.Drawing.Color.White;
-            this.buttonConsultarSaldo.Location = new System.Drawing.Point(3, 124);
-            this.buttonConsultarSaldo.Name = "buttonConsultarSaldo";
-            this.buttonConsultarSaldo.Size = new System.Drawing.Size(507, 47);
-            this.buttonConsultarSaldo.TabIndex = 7;
-            this.buttonConsultarSaldo.Text = "Consultar saldo";
-            this.buttonConsultarSaldo.UseVisualStyleBackColor = false;
-            this.buttonConsultarSaldo.Click += new System.EventHandler(this.buttonConsultarSaldo_Click);
+            this.buttonSalir.AutoSize = true;
+            this.buttonSalir.BackColor = System.Drawing.Color.SlateBlue;
+            this.buttonSalir.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonSalir.FlatAppearance.BorderSize = 0;
+            this.buttonSalir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Indigo;
+            this.buttonSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSalir.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSalir.ForeColor = System.Drawing.Color.White;
+            this.buttonSalir.Location = new System.Drawing.Point(3, 230);
+            this.buttonSalir.Name = "buttonSalir";
+            this.buttonSalir.Size = new System.Drawing.Size(507, 47);
+            this.buttonSalir.TabIndex = 9;
+            this.buttonSalir.Text = "Salir";
+            this.buttonSalir.UseVisualStyleBackColor = false;
+            this.buttonSalir.Click += new System.EventHandler(this.buttonSalir_Click);
             // 
             // buttonUltimosMovimientos
             // 
@@ -129,25 +148,6 @@
             this.buttonUltimosMovimientos.UseVisualStyleBackColor = false;
             this.buttonUltimosMovimientos.Click += new System.EventHandler(this.buttonUltimosMovimientos_Click);
             // 
-            // buttonSalir
-            // 
-            this.buttonSalir.AutoSize = true;
-            this.buttonSalir.BackColor = System.Drawing.Color.SlateBlue;
-            this.buttonSalir.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonSalir.FlatAppearance.BorderSize = 0;
-            this.buttonSalir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.buttonSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Indigo;
-            this.buttonSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSalir.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSalir.ForeColor = System.Drawing.Color.White;
-            this.buttonSalir.Location = new System.Drawing.Point(3, 230);
-            this.buttonSalir.Name = "buttonSalir";
-            this.buttonSalir.Size = new System.Drawing.Size(507, 47);
-            this.buttonSalir.TabIndex = 9;
-            this.buttonSalir.Text = "Salir";
-            this.buttonSalir.UseVisualStyleBackColor = false;
-            this.buttonSalir.Click += new System.EventHandler(this.buttonSalir_Click);
-            // 
             // ucOperaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -165,10 +165,10 @@
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Button buttonSalir;
         private System.Windows.Forms.Button buttonUltimosMovimientos;
         private System.Windows.Forms.Button buttonConsultarSaldo;
         private System.Windows.Forms.Button buttonBlanquearPin;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button buttonSalir;
     }
 }

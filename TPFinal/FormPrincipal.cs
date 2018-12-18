@@ -12,8 +12,6 @@ namespace TPFinal
 {
     public partial class FormPrincipal : Form
     {
-        private TextBoxBase CajaTextoActual;
-
         public FormPrincipal()
         {
             InitializeComponent();
@@ -44,7 +42,9 @@ namespace TPFinal
                 this.Update();
             }
         }
+        // ---
 
+        // Para uso durante desarrollo
         private void buttonCerrar_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -54,7 +54,9 @@ namespace TPFinal
         {
             this.WindowState = FormWindowState.Minimized;
         }
+        // ---
 
+        // Con estos trato de manejar el flujo
         private void FormPrincipal_Load(object sender, EventArgs e)
         {
             Ayudante.CargarIngresoDni(panelTexto, buttonSiguiente);
@@ -75,9 +77,32 @@ namespace TPFinal
 
         private void buttonSiguienteLogin_Click(object sender, EventArgs e)
         {
+            Controlador c = new Controlador();
+            Usuario u = c.Login(Ayudante.Dni, Ayudante.Pin);
+            if (u != null){
+                labelNombreUsuario.Text = $"Bienvenido {u.Nombre}";
+                labelCategoriaUsuario.Text = u.Categoria;
+                Ayudante.MostrarContenidoPanel(panelUsuario);
+
+                Ayudante.EsconderContenidoPanel(panelContenido);
+                Ayudante.CargarOperaciones(panelContenido);
+            }
+            // reducir contador de intentos. cuando contador == 0, reiniciar.
+            // pero para esto falta la funcionalidad para volver
+            else
+            {
+                MessageBox.Show("No se pudo iniciar sesión. El DNI o PIN es incorrecto.");
+                Application.Restart();
+            }
+        }
+
+        // TO-DO
+        /*
+        private void buttonAnteriorPin_Click(object sender, EventArgs e)
+        {
             Ayudante.EsconderContenidoPanel(panelContenido);
             Ayudante.CargarOperaciones(panelContenido);
         }
-
+        */
     }
 }

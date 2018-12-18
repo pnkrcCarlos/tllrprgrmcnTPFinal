@@ -14,13 +14,9 @@ namespace TPFinal
     {
         private static ucOperaciones _instancia;
 
-        private static String _dni;
-        private static String _pin;
+        public String Dni { get; set; }
 
-        public static String Dni { set { _dni = value; } }
-        public static String Pin { set { _pin = value; } }
-
-        public static Control Contenedor { get; set; }
+        public Panel Contenedor { get; set; }
 
         public ucOperaciones()
         {
@@ -46,8 +42,8 @@ namespace TPFinal
 
         private void buttonBlanquearPin_Click(object sender, EventArgs e)
         {
-
-            CargarTarjetas();
+            Ayudante.EsconderContenidoPanel(Contenedor);
+            Ayudante.CargarTarjetas(Contenedor);
         }
 
         private void buttonConsultarSaldo_Click(object sender, EventArgs e)
@@ -57,12 +53,10 @@ namespace TPFinal
 
         private void buttonUltimosMovimientos_Click(object sender, EventArgs e)
         {
-
+            Ayudante.EsconderContenidoPanel(Contenedor);
+            Ayudante.CargarMovimientos(Contenedor);
         }
 
-        private void CargarTarjetas()
-        {
-
-        }
+        
     }
 }

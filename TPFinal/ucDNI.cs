@@ -15,7 +15,7 @@ namespace TPFinal
         private static ucDni _instancia;
         private static ButtonBase _botonSiguiente;
 
-        public static TextBoxBase CajaTexto { get; set; }
+        public TextBoxBase CajaTexto { get; set; }
 
         public ucDni()
         {
@@ -35,7 +35,7 @@ namespace TPFinal
             }
         }
 
-        public static ButtonBase BotonSiguiente
+        public ButtonBase BotonSiguiente
         {
             get {
                 return _botonSiguiente;

@@ -15,7 +15,7 @@ namespace TPFinal
         private static ucPin _instancia;
         private static ButtonBase _botonSiguiente;
 
-        public static TextBoxBase CajaTexto { get; set; }
+        public TextBoxBase CajaTexto { get; set; }
 
         public ucPin()
         {
@@ -35,7 +35,7 @@ namespace TPFinal
             }
         }
 
-        public static ButtonBase BotonSiguiente
+        public ButtonBase BotonSiguiente
         {
             get
             {

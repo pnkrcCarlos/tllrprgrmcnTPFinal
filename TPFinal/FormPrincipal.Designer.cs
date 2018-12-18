@@ -37,9 +37,13 @@
             this.buttonSiguiente = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panelContenido = new System.Windows.Forms.Panel();
+            this.panelUsuario = new System.Windows.Forms.Panel();
+            this.labelCategoriaUsuario = new System.Windows.Forms.Label();
+            this.labelNombreUsuario = new System.Windows.Forms.Label();
             this.panelTitular.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panelContenido.SuspendLayout();
+            this.panelUsuario.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelEntrada
@@ -122,7 +126,7 @@
             this.panelTexto.BackColor = System.Drawing.Color.Transparent;
             this.panelTexto.Location = new System.Drawing.Point(0, 0);
             this.panelTexto.Name = "panelTexto";
-            this.panelTexto.Size = new System.Drawing.Size(510, 400);
+            this.panelTexto.Size = new System.Drawing.Size(510, 300);
             this.panelTexto.TabIndex = 4;
             // 
             // buttonSiguiente
@@ -169,12 +173,46 @@
             this.panelContenido.Size = new System.Drawing.Size(776, 400);
             this.panelContenido.TabIndex = 7;
             // 
+            // panelUsuario
+            // 
+            this.panelUsuario.Controls.Add(this.labelCategoriaUsuario);
+            this.panelUsuario.Controls.Add(this.labelNombreUsuario);
+            this.panelUsuario.Location = new System.Drawing.Point(12, 126);
+            this.panelUsuario.Name = "panelUsuario";
+            this.panelUsuario.Size = new System.Drawing.Size(776, 56);
+            this.panelUsuario.TabIndex = 8;
+            // 
+            // labelCategoriaUsuario
+            // 
+            this.labelCategoriaUsuario.AutoSize = true;
+            this.labelCategoriaUsuario.BackColor = System.Drawing.Color.Transparent;
+            this.labelCategoriaUsuario.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCategoriaUsuario.Location = new System.Drawing.Point(6, 35);
+            this.labelCategoriaUsuario.Name = "labelCategoriaUsuario";
+            this.labelCategoriaUsuario.Size = new System.Drawing.Size(81, 21);
+            this.labelCategoriaUsuario.TabIndex = 1;
+            this.labelCategoriaUsuario.Text = "Categoría";
+            this.labelCategoriaUsuario.Visible = false;
+            // 
+            // labelNombreUsuario
+            // 
+            this.labelNombreUsuario.AutoSize = true;
+            this.labelNombreUsuario.BackColor = System.Drawing.Color.Transparent;
+            this.labelNombreUsuario.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNombreUsuario.Location = new System.Drawing.Point(3, 0);
+            this.labelNombreUsuario.Name = "labelNombreUsuario";
+            this.labelNombreUsuario.Size = new System.Drawing.Size(335, 37);
+            this.labelNombreUsuario.TabIndex = 0;
+            this.labelNombreUsuario.Text = "Bienvenido Lucas Dilatro";
+            this.labelNombreUsuario.Visible = false;
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.ClientSize = new System.Drawing.Size(800, 600);
+            this.Controls.Add(this.panelUsuario);
             this.Controls.Add(this.panelTitular);
             this.Controls.Add(this.panelContenido);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -187,6 +225,8 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.panelContenido.ResumeLayout(false);
+            this.panelUsuario.ResumeLayout(false);
+            this.panelUsuario.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -201,5 +241,8 @@
         private System.Windows.Forms.Button buttonSiguiente;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panelContenido;
+        private System.Windows.Forms.Panel panelUsuario;
+        private System.Windows.Forms.Label labelCategoriaUsuario;
+        private System.Windows.Forms.Label labelNombreUsuario;
     }
 }
