@@ -62,7 +62,7 @@
             this.maskedTextBox.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.maskedTextBox.ForeColor = System.Drawing.Color.Indigo;
             this.maskedTextBox.HidePromptOnLeave = true;
-            this.maskedTextBox.Location = new System.Drawing.Point(211, 120);
+            this.maskedTextBox.Location = new System.Drawing.Point(211, 121);
             this.maskedTextBox.Margin = new System.Windows.Forms.Padding(3, 20, 3, 3);
             this.maskedTextBox.Mask = "00.000.000";
             this.maskedTextBox.Name = "maskedTextBox";
@@ -78,11 +78,11 @@
             // 
             this.label.AutoSize = true;
             this.label.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label.Font = new System.Drawing.Font("Segoe UI", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label.ForeColor = System.Drawing.Color.White;
             this.label.Location = new System.Drawing.Point(3, 50);
             this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(637, 50);
+            this.label.Size = new System.Drawing.Size(637, 51);
             this.label.TabIndex = 7;
             this.label.Text = "Ingrese su DNI";
             this.label.TextAlign = System.Drawing.ContentAlignment.BottomCenter;

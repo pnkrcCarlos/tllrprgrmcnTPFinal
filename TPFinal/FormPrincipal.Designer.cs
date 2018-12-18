@@ -47,7 +47,7 @@
             this.panelEntrada.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelEntrada.BackColor = System.Drawing.Color.Transparent;
-            this.panelEntrada.Location = new System.Drawing.Point(528, 188);
+            this.panelEntrada.Location = new System.Drawing.Point(516, 0);
             this.panelEntrada.Name = "panelEntrada";
             this.panelEntrada.Size = new System.Drawing.Size(260, 300);
             this.panelEntrada.TabIndex = 1;
@@ -129,12 +129,12 @@
             // 
             this.buttonSiguiente.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.buttonSiguiente.AutoSize = true;
-            this.buttonSiguiente.BackColor = System.Drawing.Color.Teal;
+            this.buttonSiguiente.BackColor = System.Drawing.Color.SlateBlue;
             this.buttonSiguiente.FlatAppearance.BorderSize = 0;
             this.buttonSiguiente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.buttonSiguiente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Aqua;
+            this.buttonSiguiente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Indigo;
             this.buttonSiguiente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSiguiente.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSiguiente.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSiguiente.ForeColor = System.Drawing.Color.White;
             this.buttonSiguiente.Location = new System.Drawing.Point(32, 3);
             this.buttonSiguiente.Name = "buttonSiguiente";
@@ -161,6 +161,7 @@
             // panelContenido
             // 
             this.panelContenido.BackColor = System.Drawing.Color.Transparent;
+            this.panelContenido.Controls.Add(this.panelEntrada);
             this.panelContenido.Controls.Add(this.tableLayoutPanel1);
             this.panelContenido.Controls.Add(this.panelTexto);
             this.panelContenido.Location = new System.Drawing.Point(12, 188);
@@ -174,7 +175,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.ClientSize = new System.Drawing.Size(800, 600);
-            this.Controls.Add(this.panelEntrada);
             this.Controls.Add(this.panelTitular);
             this.Controls.Add(this.panelContenido);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

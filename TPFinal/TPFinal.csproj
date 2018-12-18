@@ -48,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Ayudante.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +87,12 @@
     <Compile Include="ucNumpad.Designer.cs">
       <DependentUpon>ucNumpad.cs</DependentUpon>
     </Compile>
+    <Compile Include="ucOperaciones.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucOperaciones.Designer.cs">
+      <DependentUpon>ucOperaciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="ucPin.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -118,6 +125,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ucNumpad.resx">
       <DependentUpon>ucNumpad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucOperaciones.resx">
+      <DependentUpon>ucOperaciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucPin.resx">
       <DependentUpon>ucPin.cs</DependentUpon>

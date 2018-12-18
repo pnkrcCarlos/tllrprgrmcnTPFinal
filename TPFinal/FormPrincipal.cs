@@ -47,7 +47,7 @@ namespace TPFinal
 
         private void buttonCerrar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void buttonMinimizar_Click(object sender, EventArgs e)
@@ -57,93 +57,27 @@ namespace TPFinal
 
         private void FormPrincipal_Load(object sender, EventArgs e)
         {
-            CargarIngresoDni();
-            CargarTeclado();
-        }
-
-        private void CargarIngresoDni()
-        {
-            if (!panelTexto.Controls.Contains(ucDni.Instancia))
-            {
-                panelTexto.Controls.Add(ucDni.Instancia);
-                ucDni.Instancia.Dock = DockStyle.Fill;
-                ucDni.Instancia.BringToFront();
-                CajaTextoActual = ucDni.CajaTexto;
-                ucDni.BotonSiguiente = buttonSiguiente;
-            }
-            else
-            {
-                ucDni.Instancia.BringToFront();
-            }
+            Ayudante.CargarIngresoDni(panelTexto, buttonSiguiente);
+            Ayudante.CargarTeclado(panelEntrada);
 
             buttonSiguiente.Click += buttonSiguientePin_Click;
         }
 
-        private void CargarTeclado()
-        {
-            if (!panelEntrada.Controls.Contains(ucNumpad.Instancia))
-            {
-                panelEntrada.Controls.Add(ucNumpad.Instancia);
-                ucNumpad.Instancia.Dock = DockStyle.Fill;
-                ucNumpad.Instancia.BringToFront();
-            }
-            else
-            {
-                ucNumpad.Instancia.BringToFront();
-            }
-            ucNumpad.CajaTexto = CajaTextoActual;
-        }
-
         private void buttonSiguientePin_Click(object sender, EventArgs e)
         {
-            EsconderTextoPrevio();
-            CargarIngresoPin();
-            CargarTeclado();
-        }
+            Ayudante.EsconderContenidoPanel(panelTexto);
+            Ayudante.CargarIngresoPin(panelTexto, buttonSiguiente);
+            Ayudante.CargarTeclado(panelEntrada);
 
-        private void CargarIngresoPin()
-        {
             buttonSiguiente.Click -= buttonSiguientePin_Click;
-
-            if (!panelTexto.Controls.Contains(ucPin.Instancia))
-            {
-                panelTexto.Controls.Add(ucPin.Instancia);
-                ucPin.Instancia.Dock = DockStyle.Fill;
-                ucPin.Instancia.BringToFront();
-                CajaTextoActual = ucPin.CajaTexto;
-                ucPin.BotonSiguiente = buttonSiguiente;
-            }
-            else
-            {
-                ucDni.Instancia.BringToFront();
-            }
-
             buttonSiguiente.Click += buttonSiguienteLogin_Click;
-        }
-
-        private void EsconderTextoPrevio()
-        {
-            foreach (Control c in panelTexto.Controls)
-            {
-                c.Enabled = false;
-                c.Visible = false;
-            }
-        }
-
-        private void EsconderPanelesPrevios()
-        {
-            foreach (Control c in panelContenido.Controls)
-            {
-                c.Enabled = false;
-                c.Visible = false;
-            }
         }
 
         private void buttonSiguienteLogin_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Login");
-            EsconderPanelesPrevios();
-            //CargarOperaciones();
+            Ayudante.EsconderContenidoPanel(panelContenido);
+            Ayudante.CargarOperaciones(panelContenido);
         }
+
     }
 }
