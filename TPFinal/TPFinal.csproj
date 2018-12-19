@@ -117,6 +117,12 @@
     <Compile Include="ucPin.Designer.cs">
       <DependentUpon>ucPin.cs</DependentUpon>
     </Compile>
+    <Compile Include="ucSaldo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucSaldo.Designer.cs">
+      <DependentUpon>ucSaldo.cs</DependentUpon>
+    </Compile>
     <Compile Include="ucTarjeta.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -168,6 +174,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ucPin.resx">
       <DependentUpon>ucPin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucSaldo.resx">
+      <DependentUpon>ucSaldo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucTarjeta.resx">
       <DependentUpon>ucTarjeta.cs</DependentUpon>

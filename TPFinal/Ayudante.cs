@@ -127,5 +127,22 @@ namespace TPFinal
                 MessageBox.Show("No se pudo recuperar información sobre los movimientos.");
             }
         }
+
+        public static void CargarSaldo(Panel p)
+        {
+            Controlador c = new Controlador();
+            float? s = c.SaldoCuentaCorriente(Dni);
+            if (s != null)
+            {
+                ucSaldo saldo = ucSaldo.Instancia;
+                if (!p.Controls.Contains(saldo))
+                {
+                    p.Controls.Add(saldo);
+                    saldo.Dock = DockStyle.Fill;
+                    saldo.BringToFront();
+                    saldo.Saldo = (float)s;
+                }
+            }
+        }
     }
 }

@@ -48,7 +48,8 @@ namespace TPFinal
 
         private void buttonConsultarSaldo_Click(object sender, EventArgs e)
         {
-
+            Ayudante.EsconderContenidoPanel(Contenedor);
+            Ayudante.CargarSaldo(Contenedor);
         }
 
         private void buttonUltimosMovimientos_Click(object sender, EventArgs e)
@@ -56,7 +57,5 @@ namespace TPFinal
             Ayudante.EsconderContenidoPanel(Contenedor);
             Ayudante.CargarMovimientos(Contenedor);
         }
-
-        
     }
 }

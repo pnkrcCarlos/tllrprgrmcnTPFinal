@@ -110,7 +110,7 @@ namespace TPFinal
             }
         }
 
-        public string SaldoCuentaCorriente(string DNI)
+        public float? SaldoCuentaCorriente(string DNI)
         {
             var mUrl = ("https://my-json-server.typicode.com/utn-frcu-isi-tdp/tas-db/account-balance?id=" + DNI);
 
@@ -130,7 +130,7 @@ namespace TPFinal
 
                 if (mResponseJSON.Count >= 1)
                 {
-                    string iSaldo = mResponseJSON[0].response.balance;
+                    float iSaldo = mResponseJSON[0].response.balance;
                     return iSaldo;
                 }
                 else
